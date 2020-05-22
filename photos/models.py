@@ -1,6 +1,19 @@
 from django.db import models
 
 # Create your models here.
+class Location(models.Model):
+    id=models.AutoField
+    name=models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+class Category(models.Model) :
+    id=models.AutoField
+    name=models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name        
 class Image(models.Model):
     id=models.AutoField
     image_name=models.CharField(max_length=50)
@@ -12,16 +25,7 @@ class Image(models.Model):
     def __str__(self):
         return self.image_name
 
-class Location(models.Model):
-    id=models.AutoField
-    name=models.CharField(max_length=50)
 
-    def __str__(self):
-        return self.name
-class Category(models.Model) :
-    name=models.CharField(max_length=50)
 
-    def __str__(self):
-        return self.name
 
 
