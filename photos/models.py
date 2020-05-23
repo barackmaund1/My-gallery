@@ -7,6 +7,9 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
+    def save_location(self):
+        self.save()
+    def get_loca  
 
 class Category(models.Model) :
     id=models.AutoField
