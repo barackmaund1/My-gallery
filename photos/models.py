@@ -14,7 +14,10 @@ class Location(models.Model):
     def update_location(cls, id, value):
         cls.objects.filter(id=id).update(location=value)    
       
-    def display_locations()
+    @classmethod
+    def display_locations(cls):
+        locations = Location.objects.all()
+        return locations
 class Category(models.Model) :
     name=models.CharField(max_length=50)
 
