@@ -10,7 +10,7 @@ def index(request):
 
 def image_location(request,location):
     images=Image.filter_by_location(location)
-    return render (request,'photos/location.html',{'location_images':images})
+    return render (request,'photos/index.html',{'location_images':images})
 def search_results(request):
     if 'imagesearch' in request.GET and request.GET["imagesearch"]:
         category = request.GET.get("imagesearch")
