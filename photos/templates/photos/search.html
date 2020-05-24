@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<section class="ftco-section ftco-bread">
+    <div class="container">
+        <div class="row no-gutters slider-text justify-content-center align-items-center">
+<div class="col-md-8 ftco-animate">
+    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>Collection</span></p>
+    <h1 class="bread">My Collection</h1>
+    <div class="location">
+        <span id="locations">
+            {% for location in locations %}
+                <a class="btn btn-outline-info btn-sm" id="btn"
+                href="/location/{{location.id}}">{{location.name}}</a>
+            {%endfor%}
+        </span>
+    </div>
+</div>
+</div>
+    </div>
+</section>
+<section class="ftco-section-3">
+    <div class="photograhy">
+        
+        
+            {% if images %}
+                <h2 class="text-center" id="found">Found {{ images|length }} images in '{{message}}' category</h2>
+            {% else %}
+                <h2 class="text-center" id="foundnon"> Found 0 images for your search {{message}}</h2>
+        
+                <a class="d-block mx-auto" href="/">
+                    <button class="btn btn-sm btn-info d-block mx-auto">Back Home</button>
+                </a>
+            {% endif %}	
+            <div class="row">
+                {% if images %}
+            
+                {% for image in images %}
+
+            <div class="col-md-4 ftco-animate"data-toggle="modal" data-target="#{{image.id}}">
+                <img src="{{image.image.url}}" alt="{{image.name}}" class="photography-entry  d-flex justify-content-start align-items-end">
+                    <div class="overlay"></div>
+                    <div class="text ml-4 mb-4">
+                        <span class="tag">Model</span>
+                    </div>
+                </a>
+            </div>
+            <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modalcard">
+                <div class="modal-header">
+                    <h5 class="modal-title d-block mx-auto" id="exampleModalLongTitle">{{image.image_name}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
+                    <p>{{image.description}}</p>
+                    <span class="btn btn-sm btn-outline-success">{{image.category | title}}</span> <a href="/location/{{image.location}}" class="btn btn-sm btn-outline-info">{{image.location}}</a>
+                </div>
+                <div class="modal-footer">
+                    <input class="form-control input-lg" type="text"
+                           value="{{image.image.url}}" id="{{image.id}}.url">
+                    <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endfor%}
+{% endif %}
+        </div>
+    </div>
+</section>
+{%endblock%}

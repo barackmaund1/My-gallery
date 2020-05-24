@@ -8,6 +8,10 @@ class Location(models.Model):
         return self.name
     def save_location(self):
         self.save()
+    @classmethod
+    def display_locations(cls):
+        locations = Location.objects.all()
+        return locations    
     def delete_location(self) :
         self.delete() 
     @classmethod
@@ -15,7 +19,7 @@ class Location(models.Model):
         cls.objects.filter(id=id).update(location=value)    
       
     @classmethod
-    def display_locations(cls):
+    def get_locations(cls):
         locations = Location.objects.all()
         return locations
 class Category(models.Model) :
@@ -38,7 +42,10 @@ class Image(models.Model):
 
     def __str__(self):
         return self.image_name
-
+    @classmethod
+    def filter_by_location(cls, location):
+        image_location = Image.objects.filter(image_location=location).all()
+        return image_location
     @classmethod
     def update_image(cls, id, value):
         cls.objects.filter(id=id).update(image=value)
@@ -47,12 +54,8 @@ class Image(models.Model):
         image = cls.objects.filter(id=id).all()
         return image
     @classmethod
-    def filter_by_location(cls, location):
-        image_location = Image.objects.filter(image_location=location).all()
-        return image_location    
-    @classmethod
-    def search_by_category(cls, image_category):
-        images = cls.objects.filter(category__name__icontains=category)
+    def search_by_category(cls, category):
+        images = cls.objects.filter(image_category__name__icontains=category)
         return images    
     def save_image(self):
         self.save()
