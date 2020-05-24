@@ -47,7 +47,11 @@ class Image(models.Model):
         image = cls.objects.filter(id=id).all()
         return image
     @classmethod
-    def search_by_category(cls, category):
+    def filter_by_location(cls, location):
+        image_location = Image.objects.filter(image_location=location).all()
+        return image_location    
+    @classmethod
+    def search_by_category(cls, image_category):
         images = cls.objects.filter(category__name__icontains=category)
         return images    
     def save_image(self):

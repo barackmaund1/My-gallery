@@ -5,7 +5,8 @@ from .models import Image, Location
 def index(request):
     images=Image.objects.all()
     locations=Location.display_locations()
-    return render(request,'photos/index,html',{'image':image[::-1],locations:locations})
+   
+    return render(request,'photos/index.html',{'image':images[::-1],'locations':locations})
 
 def image_location(request,location):
     images=Image.filter_by_location(location)
