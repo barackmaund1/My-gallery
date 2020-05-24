@@ -6,7 +6,7 @@ def index(request):
     images=Image.objects.all()
     locations=Location.display_locations()
    
-    return render(request,'photos/index.html',{'image':images[::-1],'locations':locations})
+    return render(request,'photos/index.html',{'images':images[::-1],'locations':locations})
 
 def image_location(request,location):
     images=Image.filter_by_location(location)
@@ -21,3 +21,5 @@ def search_results(request):
     else:
         message = "You haven't searched for any image category"
         return render(request, 'pictures/search_results.html', {"message": message})   
+def home(request):
+    return render(request,'index.html')        
