@@ -96,5 +96,4 @@ class TestImage(TestCase):
 
     def tearDown(self):
         Image.objects.all().delete()
-        Location.objects.all().delete()
-        Category.objects.all().delete()
+
