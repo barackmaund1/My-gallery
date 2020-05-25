@@ -27,13 +27,22 @@
                 {% if location_images %}
                 {% for image in location_images %}
 
+                <!-- <div class="col-md-4 ftco-animate" data-toggle="modal" data-target="#{{image.id}}">
+                    <a href="{{image.image.url}}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({{image.image.url}});">
+                        <div class="overlay"></div>
+                        <div class="text ml-4 mb-4">
+                            <h3>{{image.image_name}}</h3>
+                            <span class="tag">{{image.image_category}}</span>
+                        </div>
+                    </a>
+                </div> -->
                 <div class="col-md-4 ftco-animate"data-toggle="modal" data-target="#{{image.id}}">
                     <img src="{{image.image.url}}" alt="{{image.name}}" class="photography-entry  d-flex justify-content-start align-items-end">
                         <div class="overlay"></div>
                         <div class="text ml-4 mb-4">
-                            <span class="tag">Model</span>
+                            <span class="tag">{{image.image_category}}</span>
                         </div>
-                    </a>
+                    
                 </div>
                 <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -47,15 +56,14 @@
                     </div>
                     <div class="modal-body">
                         <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
-                        <p>{{image.description}}</p>
-                        <span class="btn btn-sm btn-outline-success">{{image.category | title}}</span> <a href="/location/{{image.location}}" class="btn btn-sm btn-outline-info">{{image.location}}</a>
+                        
+                        <p >{{image.image_location}}</p>
                     </div>
                     <div class="modal-footer">
-                        <input class="form-control input-lg" type="text"
+                        <input class="form-control input-lg" type="text/javascript"
                                value="{{image.image.url}}" id="{{image.id}}.url">
                         <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
-                        <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
-                        </button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -65,13 +73,22 @@
                 
                 {%else%}
                 {%for image in images%}
+                <!-- <div class="col-md-4 ftco-animate" data-toggle="modal" data-target="#{{image.id}}">
+                    <a href="{{image.image.url}}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({{image.image.url}});">
+                        <div class="overlay"></div>
+                        <div class="text ml-4 mb-4">
+                            <h3>{{image.image_name}}</h3>
+                            <span class="tag">{{image.image_category}}</span>
+                        </div>
+                    </a>
+                </div> -->
                 <div class="col-md-4 ftco-animate" data-toggle="modal" data-target="#{{image.id}}">
-                    <img src="{{image.image.url}}" alt="{{image.name}}" class="photography-entry  d-flex justify-content-start align-items-end">
+                  <img src="{{image.image.url}}" alt="{{image.name}}" class="photography-entry  d-flex justify-content-start align-items-end">
                         <div class="overlay"></div>
                         <div class="text ml-4 mb-4">
                             <span class="tag">{{image.image_category}}</span>
                         </div>
-                    </a>
+                   
                 </div>
                 <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -84,11 +101,11 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img src="{{image.image.url}}" alt="{{image.image_name}}" class="img-fluid">
+                        <a href="{{image.image.url}}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({{image.image.url}});"></a>
                         <a href="/location/{{image.id}}" class="btn btn-sm btn-outline-info">{{image.image_location}}</a>
                     </div>
                     <div class="modal-footer">
-                        <input class="form-control input-lg" type="text"
+                        <input class="form-control input-lg" type="text/javascript"
                                value="{{image.image.url}}" id="{{image.id}}.url">
                         <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
                         <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
