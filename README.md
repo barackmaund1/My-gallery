@@ -1,24 +1,24 @@
 # Picture-Globe  
 ## Author  
 
->[Owiti-Charles](https://github.com/Owiti-Charles)  
+>[barack-maundu](https://github.com/barackmaund1)  
   
 # Description  
 This is a Django application for personal gallery that allows a user to upload images for other to see and be able to to share by coping the image link.
 
 ##  Live Link  
- Click [View Site](https://picturesharen.herokuapp.com/)  to visit the site
+ Click [View Site]()  to visit the site
 
 ## Screenshots 
 ###### Home page
 
-<img src="https://raw.githubusercontent.com/Owiti-Charles/Picture-Globe/master/static/images/landingpage.png">
+<img src="">
 
  ###### Search results
- <img src="https://raw.githubusercontent.com/Owiti-Charles/Picture-Globe/master/static/images/searchfood.png"> 
+ <img src=""> 
 
  ###### Image Details 
- <img src="https://raw.githubusercontent.com/Owiti-Charles/Picture-Globe/master/static/images/modalscrn.png">
+ <img src=">
 
 ## User Story  
 
@@ -35,7 +35,7 @@ To get the project .......
 
 ##### Cloning the repository:  
  ```bash 
- https://github.com/Owiti-Charles/Picture-Globe.git 
+  
 ```
 ##### Navigate into the folder and install requirements  
  ```bash 
@@ -84,9 +84,9 @@ Open the application on your browser `127.0.0.1:8000`.
 * There are no known bugs currently but pull requests are allowed incase you spot a bug  
 
 ## Contact Information   
-If you have any question or contributions, please email me at [mikeycharlesm7@gmail.com]  
+If you have any question or contributions, please email me at [pmaundu49@gmail.com]  
 
 ## License 
 
-* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/Owiti-Charles/Picture-Globe/blob/master/LICENSE)  
-* Copyright (c) 2019 **Owiti Charles**
+* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)] 
+* Copyright (c) 2019 **barack maundu**
