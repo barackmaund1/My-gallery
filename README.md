@@ -1,4 +1,4 @@
-# Picture-Globe  
+# My gallery
 ## Author  
 
 [barack-maundu](https://github.com/barackmaund1)  
@@ -18,7 +18,7 @@ This is a Django application for personal gallery that allows a user to upload i
  <img src="https://raw.githubusercontent.com/barackmaund1/My-gallery/master/static/images/search.png"> 
 
  ###### Image Details 
- <img src="">
+ <img src="https://raw.githubusercontent.com/barackmaund1/My-gallery/master/static/images/details.png">
 
 ## User Story  
 
