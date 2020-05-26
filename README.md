@@ -75,8 +75,8 @@ Open the application on your browser `127.0.0.1:8000`.
 
 ## Technology used  
 
-* [Python3.6](https://www.python.org/)  
-* [Django 1.11](https://docs.djangoproject.com/en/2.2/)  
+* [Python3.7.7](https://www.python.org/)  
+* [Django 3.0.6](https://docs.djangoproject.com/en/2.2/)  
 * [Heroku](https://heroku.com)  
 
 
