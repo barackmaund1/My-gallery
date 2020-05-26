@@ -58,6 +58,7 @@
                         <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
                         
                         <p >{{image.image_location}}</p>
+                        <p>{{image.image_description}}</p>
                     </div>
                     <div class="modal-footer">
                         <input class="form-control input-lg" type="text/javascript"
@@ -103,6 +104,7 @@
                     <div class="modal-body">
                         <a href="{{image.image.url}}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({{image.image.url}});"></a>
                         <a href="/location/{{image.id}}" class="btn btn-sm btn-outline-info">{{image.image_location}}</a>
+                        <p>{{image.image_description}}</p>
                     </div>
                     <div class="modal-footer">
                         <input class="form-control input-lg" type="text/javascript"

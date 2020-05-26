@@ -1,24 +1,24 @@
 # Picture-Globe  
 ## Author  
 
->[barack-maundu](https://github.com/barackmaund1)  
+[barack-maundu](https://github.com/barackmaund1)  
   
 # Description  
 This is a Django application for personal gallery that allows a user to upload images for other to see and be able to to share by coping the image link.
 
 ##  Live Link  
- Click [View Site]()  to visit the site
+ Click [View Site](https://gallery-49.herokuapp.com/)  to visit the site
 
 ## Screenshots 
 ###### Home page
 
-<img src="">
+<img src="https://raw.githubusercontent.com/barackmaund1/My-gallery/master/static/images/home.png">
 
  ###### Search results
- <img src=""> 
+ <img src="https://raw.githubusercontent.com/barackmaund1/My-gallery/master/static/images/search.png"> 
 
  ###### Image Details 
- <img src=">
+ <img src="">
 
 ## User Story  
 
